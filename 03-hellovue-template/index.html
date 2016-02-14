@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf8">
+		<title>hello vue</title>
+		<link type="text/css" rel="stylesheet" href="hello-vue.css">
+
+	</head>
+	<body>
+		<script type="text/x-template" id="user_list">
+			<ul>
+			    <li class="user" v-for="user in users" transition>
+			        <span>{{user.name}} - {{user.email}}</span>
+			        <button v-on:click="removeUser($index)">X</button>
+			    </li>
+			</ul>
+		</script>
+		<script type="text/x-template" id="new_user">
+			<form id="form" v-on:submit.prevent="addUser">
+				<input v-model="newUser.name" placeholder="name">
+				<input v-model="newUser.email" placeholder="name@domain.com">
+				<input type="submit" value="Add User">
+				<input type="button" value="Random User" v-on:click="randomUser">
+			</form>
+		</script>
+		<script type="text/x-template" id="error_msg">
+			<ul class="errors">
+				<li v-show="!validation.name">Name cannot be empty.</li>
+				<li v-show="!validation.email">Please provide a valid email address.</li>
+			</ul>
+		</script>
+		<div id="app">
+			<user-list></user-list>
+			<new-user></new-user>
+			<error-msg></error-msg>
+		</div>
+
+		<script type="text/javascript" src="../02-hellovue/vue.js"></script>
+
+		<script type="text/javascript" src="store.js"></script>
+		<script type="text/javascript" src="hello-vue.js"></script>
+
+	</body>
+</html>
