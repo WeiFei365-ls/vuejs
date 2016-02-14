@@ -17,6 +17,10 @@ npm run dev
 npm run build
 ```
 
+## 关键知识点
+
+* [vue-cli](https://github.com/vuejs/vue-cli)
+
 ## description
 
 > 项目结构基于 [vue-cli](https://github.com/vuejs/vue-cli) 自动生成；demo 实现由 [03-hellovue-template](https://github.com/WeiFei365-ls/vuejs/tree/master/03-hellovue-template) 衍生而来；
